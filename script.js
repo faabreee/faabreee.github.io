@@ -1,3 +1,6 @@
+
+
+
 document.addEventListener("DOMContentLoaded", function() {
     // Obtiene la barra del gráfico
     const barra = document.querySelector(".barra");
