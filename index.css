@@ -1,3 +1,33 @@
 html{
     font-family: 'Nunito', sans-serif;
 }
+
+.contenedor{
+    display: flex;
+    padding: 10px;
+    width: 490px;
+    height: max-content;
+    justify-content: center;
+    align-items: center;
+}
+
+.grafico {
+    width: 300px;
+    height: 30px;
+    background-color: #f0f0f0;
+    margin: 20px;
+    position: relative;
+    border-radius: 30px;
+}
+
+.barra {
+    background-color: #3498db;
+    width: 0;
+    height: 100%;
+    transition: width 2s ease-in-out; /* Ajusta la duración de la animación aquí */
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 30px;
+}
+
