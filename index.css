@@ -41,8 +41,33 @@ html{
 
 
 
-
-
+.tabs {
+    display: flex;
+  }
+  
+  .tab-button {
+    background-color: #ccc;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+  
+  .tab-content {
+    display: none;
+    padding: 10px;
+    border: 1px solid #ccc;
+    animation: fadeIn 0.5s; /* Agrega la animación fadeIn */
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
 
 
 

@@ -15,3 +15,21 @@ document.addEventListener("DOMContentLoaded", function() {
     barra.style.width = anchoBarra + "px";
 });
 
+
+
+
+
+function showTab(tabId) {
+    // Oculta todos los contenidos de pestañas
+    var tabContents = document.querySelectorAll('.tab-content');
+    for (var i = 0; i < tabContents.length; i++) {
+      tabContents[i].style.display = 'none';
+    }
+  
+    // Muestra el contenido de la pestaña seleccionada
+    document.getElementById(tabId).style.display = 'block';
+  }
+  
+  // Mostrar la primera pestaña por defecto
+  showTab('tab1');
+  
