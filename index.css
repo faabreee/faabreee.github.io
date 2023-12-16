@@ -1,76 +1,131 @@
-html{
-    font-family: 'Nunito', sans-serif;
+*{
+  margin: 0;
+}
+body{
+  font-family: 'Work Sans', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #fbfbfb;
 }
 
-.contenedor{
-    display: flex;
-    padding: 10px;
-    width: 490px;
-    height: max-content;
-    justify-content: center;
-    align-items: center;
+header{
+  width: 100%;
+  height: 85px;
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+
+  background-color: white;
+  box-shadow: 0px -37px 63px 15px rgba(0, 0, 0, 0.148);
+
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
-.grafico {
-    width: 300px;
-    height: 30px;
-    background-color: #f0f0f0;
-    margin: 20px;
-    position: relative;
-    border-radius: 30px;
+.logo{
+  width: 30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.barra {
-    background-color: #3498db;
-    width: 0;
-    height: 100%;
-    transition: width 2s ease-in-out; /* Ajusta la duración de la animación aquí */
-    position: absolute;
-    top: 0;
-    left: 0;
-    border-radius: 30px;
+nav{
+  width: 30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  font-size: 11px;
+}
+nav a{
+  text-decoration: none;
+  color: inherit;
+}
+
+main{
+  width: 100%;
+  height: 88vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+}
+
+section{
+  width: 70%;
+  height: 48vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+section .content{
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+section .content p{
+  font-size: 20px;
+}
+
+section .title{
+  width: 100%;
+  height: 45%;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  font-size: 240%;
+}
+section .accesos{
+  width: 60%;
+  height: 40px;
+  padding: 20px;
+  display: flex;
+  justify-content: start;
+  gap: 30px;
+}
+section .accesos img{
+  height: 100%;
+}
+
+section .image{
+  width: 40%;
+  display: grid;
+  place-items: center;
+}
+section .image img{
+  width: 60%;
+  object-fit: cover;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 
 
 
-
-
-
-
-
-
-
-
-.tabs {
-    display: flex;
-  }
-  
-  .tab-button {
-    background-color: #ccc;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-  }
-  
-  .tab-content {
-    display: none;
-    padding: 10px;
-    border: 1px solid #ccc;
-    animation: fadeIn 0.5s; /* Agrega la animación fadeIn */
-  }
-  
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
-  }
-  
-
-
-
-
-
-  
+.habilidades{
+  width: 100%;
+}
+.habilidades .container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.habilidades .skills{
+  width: max-content;
+  background-color: white;
+  padding: 20px;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+.habilidades img{
+  width: 55px;
+  height: 55px;
+  object-fit: cover;
+}
