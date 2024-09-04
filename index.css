@@ -13,6 +13,7 @@ html{
   --background-dark-hover: #141415;
   --font-dark: #fafafa;
   --font-dark-hover: #e2e2e2;
+  --border-button: #27272a;
 }
 
 body{
@@ -20,9 +21,71 @@ body{
   color: var(--font-dark);
 }
 
+/* From Uiverse.io by namecho */ 
+.switch {
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  --button-width: 3em;
+  --button-height: 1.5em;
+  --toggle-diameter: 1.2em;
+  --button-toggle-offset: calc((var(--button-height) - var(--toggle-diameter)) / 2);
+  --toggle-shadow-offset: 10px;
+  --toggle-wider: 3em;
+  --color-grey: #cccccc;
+  --color-green: #27272a;
+  cursor: pointer;
+ }
+ 
+ .slider {
+  display: inline-block;
+  width: var(--button-width);
+  height: var(--button-height);
+  background-color: var(--color-grey);
+  border-radius: calc(var(--button-height) / 2);
+  position: relative;
+  transition: 0.3s all ease-in-out;
+ }
+ 
+ .slider::after {
+  content: "";
+  display: inline-block;
+  width: var(--toggle-diameter);
+  height: var(--toggle-diameter);
+  background-color: #fff;
+  border-radius: calc(var(--toggle-diameter) / 2);
+  position: absolute;
+  top: var(--button-toggle-offset);
+  transform: translateX(var(--button-toggle-offset));
+  box-shadow: var(--toggle-shadow-offset) 0 calc(var(--toggle-shadow-offset) * 4) rgba(0, 0, 0, 0.1);
+  transition: 0.3s all ease-in-out;
+ }
+ 
+ .switch input[type="checkbox"]:checked + .slider {
+  background-color: var(--color-green);
+ }
+ 
+ .switch input[type="checkbox"]:checked + .slider::after {
+  transform: translateX(calc(var(--button-width) - var(--toggle-diameter) - var(--button-toggle-offset)));
+  box-shadow: calc(var(--toggle-shadow-offset) * -1) 0 calc(var(--toggle-shadow-offset) * 4) rgba(0, 0, 0, 0.1);
+ }
+ 
+ .switch input[type="checkbox"] {
+  display: none;
+ }
+ 
+ .switch input[type="checkbox"]:active + .slider::after {
+  width: var(--toggle-wider);
+ }
+ 
+ .switch input[type="checkbox"]:checked:active + .slider::after {
+  transform: translateX(calc(var(--button-width) - var(--toggle-wider) - var(--button-toggle-offset)));
+ }
+ 
+
 .contenedor{
   width: 100%;
-  height: 75vh;
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center; 
@@ -42,15 +105,27 @@ body{
   gap: 40px;
 }
 
-.nombre{
+.nombre p{
   font-size: 30px;
+}
+
+.nombre span{
+  font-size: 17px;
 }
 .nombre h1{
   font-size: 70px;
   text-shadow: 2px 4px 29px rgba(255, 255, 255, 0.117);
 }
 
-.boton button{
+.boton{
+  display: flex;
+  width: 100%;
+  justify-content: end;
+  align-items: center;
+  gap: 20px;
+}
+
+.boton .about{
   display: flex;
   align-items: center;
   padding: 8px 20px;
@@ -62,11 +137,31 @@ body{
   font-weight: 500;
   cursor: pointer;
 }
+
+.boton .about:hover{
+  background-color: var(--font-dark-hover);
+}
+
+.boton .download{
+  display: flex;
+  align-items: center;
+  padding: 8px 20px;
+  border-radius: 10px;
+  background-color: var(--background-dark);
+  color: var(--font-dark);
+  border: 0.1px solid var(--border-button);
+  transition: 0.2s;
+  font-size: 17px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.boton .download:hover{
+  background-color: var(--background-dark-hover);
+}
+
 .boton a{
   text-decoration: none;
-}
-.boton button:hover{
-  background-color: var(--font-dark-hover);
 }
 
 .redes{
@@ -133,7 +228,7 @@ body{
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  gap: 10px;
+  gap: 20px;
 }
 
 .logos{
@@ -145,12 +240,20 @@ body{
 }
 
 .logos img{
-  width: 70px;
-  height: 70px;
+  width: 50px;
+  height: 50px;
   object-fit: cover;
   pointer-events: none;
   user-select: none;
   -webkit-user-select: none;
+}
+
+.logos i{
+  font-size: 70px;
+  pointer-events: none;
+  user-select: none;
+  -webkit-user-select: none;
+  
 }
 
 
